@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AI Tools Hub – Find the right AI tool in seconds</title>
+    <meta name="description"
+        content="A hand-picked directory of AI tools for writing, coding, images, video, audio and productivity. Search, filter by price and save your favourites.">
+    <meta name="theme-color" content="#2f5bff">
+    <meta property="og:title" content="AI Tools Hub – Find the right AI tool in seconds">
+    <meta property="og:description"
+        content="Hand-picked AI tools for writing, coding, images, video, audio and productivity.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='12' y='12' width='30' height='30' rx='8' fill='%23FFD23F'/%3E%3Crect x='5' y='5' width='30' height='30' rx='8' fill='%232F5BFF'/%3E%3Cpath d='M20 11.5l2.3 6.6 6.6 2.3-6.6 2.3L20 29.3l-2.3-6.6-6.6-2.3 6.6-2.3z' fill='%23fff'/%3E%3C/svg%3E">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Instrument+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #eef2f7;
+            --sf: #fff;
+            --ink: #14213d;
+            --mu: #55627a;
+            --ln: #d5dce8;
+            --ac: #2f5bff;
+            --aci: #fff;
+            --mk: #ffd23f;
+            --h: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+            --b: "Instrument Sans", "Segoe UI", system-ui, sans-serif
+        }
+
+        @media(prefers-color-scheme:dark) {
+            :root {
+                --bg: #0f1626;
+                --sf: #18223a;
+                --ink: #eef2fb;
+                --mu: #a5b0c8;
+                --ln: #2b3858;
+                --ac: #7c97ff;
+                --aci: #0f1626
+            }
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 84px
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: var(--b);
+            line-height: 1.6
+        }
+
+        a {
+            color: var(--ac)
+        }
+
+        .sr {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0)
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--ac);
+            outline-offset: 2px
+        }
+
+        .top {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px max(24px, calc((100% - 1120px)/2));
+            background: var(--bg);
+            border-bottom: 1.5px solid var(--ln)
+        }
+
+        .brand {
+            font-family: var(--h);
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: var(--ink);
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            align-items: center
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--mu);
+            font-weight: 500
+        }
+
+        .nav a:hover {
+            color: var(--ink)
+        }
+
+        .nav .cta {
+            background: var(--ac);
+            color: var(--aci);
+            padding: 9px 18px;
+            border-radius: 10px;
+            font-weight: 600
+        }
+
+        .mb {
+            display: none;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            background: none;
+            color: var(--ink);
+            border: 1.5px solid var(--ln);
+            padding: 8px 14px;
+            border-radius: 10px
+        }
+
+        .hero {
+            background-image: radial-gradient(var(--ln) 1.2px, transparent 1.2px);
+            background-size: 24px 24px
+        }
+
+        .hero-in {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 60px 24px 36px
+        }
+
+        .badge {
+            display: inline-block;
+            font-weight: 600;
+            font-size: .9rem;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: var(--mk);
+            color: #14213d;
+            margin-bottom: 20px
+        }
+
+        .hero h1 {
+            font-family: var(--h);
+            font-weight: 800;
+            font-size: clamp(2.4rem, 7vw, 4.6rem);
+            line-height: 1.02;
+            letter-spacing: -.025em;
+            margin: 0 0 18px;
+            max-width: 15ch
+        }
+
+        .lead {
+            color: var(--mu);
+            font-size: 1.15rem;
+            margin: 0 0 28px;
+            max-width: 52ch
+        }
+
+        .search {
+            display: block;
+            max-width: 720px
+        }
+
+        .search input {
+            width: 100%;
+            padding: 18px 22px;
+            font: inherit;
+            font-size: 1.1rem;
+            color: var(--ink);
+            background: var(--sf);
+            border: 2px solid var(--ink);
+            border-radius: 14px;
+            box-shadow: 6px 6px 0 var(--mk)
+        }
+
+        .search input:focus {
+            outline: none;
+            border-color: var(--ac);
+            box-shadow: 6px 6px 0 var(--ac)
+        }
+
+        .pop {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-top: 22px;
+            color: var(--mu);
+            font-size: .95rem
+        }
+
+        .pop button {
+            font: inherit;
+            font-size: .9rem;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: var(--sf);
+            color: var(--ink);
+            border: 1.5px solid var(--ln)
+        }
+
+        .pop button:hover {
+            border-color: var(--ink)
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 40px;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1.5px solid var(--ln)
+        }
+
+        .stats b {
+            display: block;
+            font-family: var(--h);
+            font-weight: 800;
+            font-size: 2rem;
+            line-height: 1.1
+        }
+
+        .stats span {
+            color: var(--mu);
+            font-size: .95rem
+        }
+
+        .sec {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 36px 24px
+        }
+
+        .sec h2 {
+            font-family: var(--h);
+            font-size: 1.7rem;
+            margin: 0 0 6px;
+            letter-spacing: -.01em
+        }
+
+        .sub {
+            color: var(--mu);
+            margin: 0 0 20px
+        }
+
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px
+        }
+
+        .tile {
+            font: inherit;
+            text-align: left;
+            cursor: pointer;
+            background: var(--sf);
+            color: var(--ink);
+            border: 1.5px solid var(--ln);
+            border-radius: 14px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px
+        }
+
+        .tile:hover {
+            border-color: var(--ink);
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0 var(--mk)
+        }
+
+        .ti {
+            font-size: 1.5rem;
+            line-height: 1.3
+        }
+
+        .tile b {
+            font-family: var(--h);
+            font-size: 1.05rem
+        }
+
+        .tile small {
+            color: var(--mu)
+        }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px
+        }
+
+        .chip {
+            font: inherit;
+            font-weight: 500;
+            font-size: .93rem;
+            cursor: pointer;
+            padding: 8px 15px;
+            border-radius: 999px;
+            background: none;
+            color: var(--ink);
+            border: 1.5px solid var(--ln)
+        }
+
+        .chip[aria-pressed=true] {
+            background: var(--ink);
+            color: var(--bg);
+            border-color: var(--ink)
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 16px
+        }
+
+        .head h2 {
+            margin: 0
+        }
+
+        select {
+            font: inherit;
+            padding: 9px 12px;
+            border-radius: 10px;
+            background: var(--sf);
+            color: var(--ink);
+            border: 1.5px solid var(--ln)
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px
+        }
+
+        .card {
+            position: relative;
+            background: var(--sf);
+            border: 1.5px solid var(--ln);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        .card:hover {
+            border-color: var(--ink);
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 var(--mk)
+        }
+
+        .ct {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-right: 38px
+        }
+
+        .lg {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            flex: none;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-family: var(--h);
+            font-weight: 800
+        }
+
+        .card h3 {
+            font-family: var(--h);
+            font-size: 1.12rem;
+            margin: 0
+        }
+
+        .cat {
+            font-size: .85rem;
+            color: var(--mu)
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--mu);
+            font-size: .96rem;
+            flex: 1
+        }
+
+        .cf {
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .pr {
+            font-size: .85rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 999px;
+            border: 1.5px solid currentColor
+        }
+
+        .Free {
+            color: #1b7f4b
+        }
+
+        .Freemium {
+            color: #8a5a00
+        }
+
+        .Paid {
+            color: #6b3fa0
+        }
+
+        @media(prefers-color-scheme:dark) {
+            .Free {
+                color: #5fd39a
+            }
+
+            .Freemium {
+                color: #f0c36a
+            }
+
+            .Paid {
+                color: #c3a2f0
+            }
+        }
+
+        .visit {
+            font-weight: 600;
+            font-size: .95rem;
+            text-decoration: none
+        }
+
+        .visit::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 14px
+        }
+
+        .save {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            z-index: 2;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            background: none;
+            border: 1.5px solid var(--ln);
+            border-radius: 10px;
+            color: var(--mu);
+            font-size: 1.1rem
+        }
+
+        .save[aria-pressed=true] {
+            background: var(--mk);
+            border-color: var(--mk);
+            color: #14213d
+        }
+
+        .empty {
+            text-align: center;
+            color: var(--mu);
+            padding: 44px 0
+        }
+
+        .blk {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 44px 24px
+        }
+
+        .blk h2 {
+            font-family: var(--h);
+            font-size: 1.8rem;
+            margin: 0 0 16px
+        }
+
+        .blk p,
+        .blk li {
+            color: var(--mu)
+        }
+
+        .steps {
+            max-width: 1120px
+        }
+
+        .stp {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px
+        }
+
+        .stp article {
+            border-top: 3px solid var(--ink);
+            padding-top: 16px
+        }
+
+        .num {
+            display: inline-grid;
+            place-items: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background: var(--mk);
+            color: #14213d;
+            font-family: var(--h);
+            font-weight: 800;
+            margin-bottom: 10px
+        }
+
+        .stp h3 {
+            font-family: var(--h);
+            margin: 0 0 6px;
+            font-size: 1.2rem
+        }
+
+        .stp p {
+            margin: 0
+        }
+
+        details {
+            border-top: 1.5px solid var(--ln);
+            padding: 15px 0
+        }
+
+        details:last-of-type {
+            border-bottom: 1.5px solid var(--ln)
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600
+        }
+
+        details p {
+            margin: 10px 0 0
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-width: 620px
+        }
+
+        .form label {
+            font-weight: 600;
+            margin-top: 8px
+        }
+
+        .form input,
+        .form select,
+        .form textarea {
+            font: inherit;
+            padding: 13px 15px;
+            border-radius: 10px;
+            border: 1.5px solid var(--ln);
+            background: var(--sf);
+            color: var(--ink);
+            width: 100%
+        }
+
+        .btn {
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 14px 26px;
+            border: 0;
+            border-radius: 10px;
+            background: var(--ac);
+            color: var(--aci)
+        }
+
+        .form .btn {
+            margin-top: 14px;
+            align-self: flex-start
+        }
+
+        .msg {
+            color: #1b7f4b;
+            font-weight: 500;
+            min-height: 1.5em
+        }
+
+        .news {
+            max-width: 1072px;
+            margin: 20px auto 48px;
+            padding: 40px 32px;
+            background: var(--ink);
+            color: var(--bg);
+            border-radius: 20px;
+            box-shadow: 8px 8px 0 var(--mk)
+        }
+
+        .news h2 {
+            font-family: var(--h);
+            font-size: 1.9rem;
+            margin: 0 0 8px
+        }
+
+        .news p {
+            margin: 0 0 18px;
+            opacity: .8
+        }
+
+        .inl {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        .inl input {
+            flex: 1 1 220px;
+            padding: 14px 16px;
+            font: inherit;
+            border-radius: 10px;
+            border: 0;
+            background: var(--sf);
+            color: var(--ink)
+        }
+
+        .inl .btn {
+            background: var(--mk);
+            color: #14213d
+        }
+
+        .news .msg {
+            color: var(--mk);
+            margin-top: 12px
+        }
+
+        .foot {
+            border-top: 1.5px solid var(--ln)
+        }
+
+        .fi {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 30px 24px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 18px
+        }
+
+        .fi p {
+            margin: 6px 0 0;
+            color: var(--mu);
+            font-size: .92rem;
+            max-width: 44ch
+        }
+
+        .fi nav {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap
+        }
+
+        .fi nav a {
+            color: var(--mu);
+            text-decoration: none;
+            font-weight: 500
+        }
+
+        .cp {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px 36px;
+            color: var(--mu);
+            font-size: .9rem
+        }
+
+        .up {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 90;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 0;
+            cursor: pointer;
+            background: var(--ac);
+            color: var(--aci);
+            font-size: 1.3rem;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .25);
+            display: none
+        }
+
+        .up.show {
+            display: block
+        }
+
+        @media(max-width:720px) {
+            .mb {
+                display: block
+            }
+
+            .nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 24px;
+                right: 24px;
+                z-index: 20;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 4px;
+                padding: 14px;
+                background: var(--sf);
+                border: 1.5px solid var(--ln);
+                border-radius: 14px
+            }
+
+            .nav.open {
+                display: flex
+            }
+
+            .nav a {
+                padding: 10px 8px
+            }
+
+            .nav .cta {
+                text-align: center
+            }
+
+            .hero-in {
+                padding-top: 36px
+            }
+
+            .news {
+                margin-left: 16px;
+                margin-right: 16px;
+                padding: 28px 22px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+
+            .tile:hover,
+            .card:hover {
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top">
+        <a class="brand" href="#top"><span class="lgo"></span>AI Tools Hub</a>
+        <button class="mb" id="mb" aria-expanded="false" aria-controls="nav">Menu</button>
+        <nav class="nav" id="nav" aria-label="Main">
+            <a href="#tools">Tools</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+            <a class="cta" href="#tools">Browse tools</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="hero-in">
+                <span class="badge">Free AI tools directory</span>
+                <h1>What do you want to get done with AI?</h1>
+                <p class="lead">Find the right tool for writing, coding, images, video, audio and everyday work. Compare
+                    pricing and save your favourites.</p>
+                <label class="search" for="q"><span class="sr">Search tools</span>
+                    <input id="q" type="search" placeholder="Try “logo”, “code”, “voice” or “presentation”"
+                        autocomplete="off">
+                </label>
+                <div class="pop" id="pop"><span>Popular:</span></div>
+                <div class="stats">
+                    <div><b id="sTools">0</b><span>AI tools</span></div>
+                    <div><b id="sCats">0</b><span>categories</span></div>
+                    <div><b>Free</b><span>to use, always</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec">
+            <h2>Browse by category</h2>
+            <p class="sub">Pick what you want to do.</p>
+            <div class="tiles" id="tiles"></div>
+        </section>
+
+        <section id="tools" class="sec">
+            <div class="head">
+                <h2 id="rt">All tools</h2>
+                <div>
+                    <label for="price" class="sr">Pricing</label>
+                    <select id="price">
+                        <option value="all">Any pricing</option>
+                        <option>Free</option>
+                        <option>Freemium</option>
+                        <option>Paid</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+            <div id="grid" class="grid" aria-live="polite"></div>
+            <p id="empty" class="empty" hidden></p>
+        </section>
+        <section class="blk steps">
+            <h2>How it works</h2>
+            <div class="stp">
+                <article><span class="num">1</span>
+                    <h3>Search or browse</h3>
+                    <p>Type what you want to do, or pick a category.</p>
+                </article>
+                <article><span class="num">2</span>
+                    <h3>Compare pricing</h3>
+                    <p>See at a glance if a tool is free, freemium or paid.</p>
+                </article>
+                <article><span class="num">3</span>
+                    <h3>Visit and save</h3>
+                    <p>Open the tool’s website, and tap the star to keep it for later.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="blk" id="about">
+            <h2>About</h2>
+            <p>New AI tools launch every week, and most people just want to know which one will help with their task
+                today. AI Tools Hub is a simple, searchable directory that answers that.</p>
+            <p>We list tools that are live, actively maintained, and clear about pricing.</p>
+        </section>
+
+        <section class="blk" id="faq">
+            <h2>Questions</h2>
+            <details>
+                <summary>Is AI Tools Hub free to use?</summary>
+                <p>Yes. Searching, filtering and saving tools costs nothing.</p>
+            </details>
+            <details>
+                <summary>Do you get paid when I click a tool?</summary>
+                <p>Links go straight to each tool’s own website.</p>
+            </details>
+            <details>
+                <summary>How do I suggest a tool?</summary>
+                <p>Use the <a href="#contact">contact form</a> and send the name and link.</p>
+            </details>
+        </section>
+
+        <section class="blk" id="contact">
+            <h2>Contact us</h2>
+            <form id="cf" class="form">
+                <label for="cn">Your name</label><input id="cn" required>
+                <label for="ce">Email</label><input id="ce" type="email" required>
+                <label for="ct">Topic</label>
+                <select id="ct">
+                    <option>Suggest a tool</option>
+                    <option>Report a problem</option>
+                    <option>Something else</option>
+                </select>
+                <label for="cm">Message</label><textarea id="cm" rows="5" required></textarea>
+                <button class="btn" type="submit">Send message</button>
+                <p id="cmsg" class="msg" role="status"></p>
+            </form>
+        </section>
+
+        <section class="news">
+            <h2>One new AI tool, every week</h2>
+            <p>A short email with the best new tool we found. No spam.</p>
+            <form id="nf" class="inl">
+                <label class="sr" for="ne">Email</label>
+                <input id="ne" type="email" placeholder="you@example.com" required>
+                <button class="btn" type="submit">Subscribe</button>
+            </form>
+            <p id="nmsg" class="msg" role="status"></p>
+        </section>
+        <section class="blk" id="privacy">
+            <h2>Privacy</h2>
+            <p>We collect very little. Your saved tools stay in your own browser and are never sent to us. If you use
+                the contact form or newsletter, your name and email are used only to reply or to send the newsletter,
+                and you can ask us to delete them any time. Form messages are delivered through a third-party form
+                service. Each tool card links to another website with its own privacy policy.</p>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <div class="fi">
+            <div>
+                <a class="brand" href="#top"><span class="lgo"></span>AI Tools Hub</a>
+                <p>A hand-picked directory of AI tools. Prices change, so check each tool’s website.</p>
+            </div>
+            <nav aria-label="Footer"><a href="#tools">Tools</a><a href="#about">About</a><a
+                    href="#contact">Contact</a><a href="#privacy">Privacy</a></nav>
+        </div>
+        <p class="cp">© <span id="yr"></span> AI Tools Hub. Your saved tools stay in your own browser.</p>
+    </footer>
+
+    <button class="up" id="up" aria-label="Back to top">↑</button>
+
+    <script>
+        var EMAIL = "aftabahmad100526@gmail.com";
+
+        var TOOLS = [
+            {n: "ChatGPT", c: "Writing", p: "Freemium", f: 1, u: "https://chatgpt.com", d: "General AI assistant for writing, research and brainstorming."},
+            {n: "Claude", c: "Writing", p: "Freemium", f: 1, u: "https://claude.ai", d: "AI assistant for long documents, writing, coding and analysis."},
+            {n: "Gemini", c: "Writing", p: "Freemium", u: "https://gemini.google.com", d: "Google's AI assistant, linked to Search, Gmail and Docs."},
+            {n: "Perplexity", c: "Research", p: "Freemium", f: 1, u: "https://www.perplexity.ai", d: "Answer engine that searches the web and cites sources."},
+            {n: "Grammarly", c: "Writing", p: "Freemium", u: "https://www.grammarly.com", d: "Fixes grammar, tone and clarity as you write."},
+            {n: "GitHub Copilot", c: "Coding", p: "Freemium", f: 1, u: "https://github.com/features/copilot", d: "Code suggestions and chat inside VS Code."},
+            {n: "Cursor", c: "Coding", p: "Freemium", u: "https://cursor.com", d: "AI code editor that edits multiple files from a prompt."},
+            {n: "Replit", c: "Coding", p: "Freemium", u: "https://replit.com", d: "Build and host apps from a prompt in the browser."},
+            {n: "Midjourney", c: "Images", p: "Paid", f: 1, u: "https://www.midjourney.com", d: "High-quality artistic images from text prompts."},
+            {n: "Leonardo AI", c: "Images", p: "Freemium", u: "https://leonardo.ai", d: "Images, game assets and concept art with fine control."},
+            {n: "Canva", c: "Design", p: "Freemium", f: 1, u: "https://www.canva.com", d: "Design posts, logos and slides with built-in AI."},
+            {n: "Remove.bg", c: "Images", p: "Freemium", u: "https://www.remove.bg", d: "Removes image backgrounds in seconds."},
+            {n: "Runway", c: "Video", p: "Freemium", u: "https://runwayml.com", d: "Create and edit video clips from text and images."},
+            {n: "CapCut", c: "Video", p: "Freemium", u: "https://www.capcut.com", d: "Video editor with auto-captions and AI effects."},
+            {n: "ElevenLabs", c: "Audio", p: "Freemium", f: 1, u: "https://elevenlabs.io", d: "Realistic text-to-speech and voice generation."},
+            {n: "Suno", c: "Audio", p: "Freemium", u: "https://suno.com", d: "Create full songs with vocals from a text prompt."},
+            {n: "Gamma", c: "Productivity", p: "Freemium", u: "https://gamma.app", d: "Generate presentations and web pages from a prompt."},
+            {n: "NotebookLM", c: "Research", p: "Free", u: "https://notebooklm.google", d: "Upload sources, ask questions, get audio summaries."},
+            {n: "Jasper", c: "Writing", p: "Paid", u: "https://www.jasper.ai", d: "AI writing platform for marketing teams and brand voice."},
+            {n: "Writesonic", c: "Writing", p: "Freemium", u: "https://writesonic.com", d: "Blog posts, ads and SEO content from a short prompt."},
+            {n: "QuillBot", c: "Writing", p: "Freemium", u: "https://quillbot.com", d: "Paraphrase, summarise and check grammar."},
+            {n: "Wordtune", c: "Writing", p: "Freemium", u: "https://www.wordtune.com", d: "Rewrites your sentences to sound clearer."},
+            {n: "Rytr", c: "Writing", p: "Freemium", u: "https://rytr.me", d: "Quick AI writing for emails, captions and posts."},
+            {n: "Elicit", c: "Research", p: "Freemium", u: "https://elicit.com", d: "Finds and summarises academic papers."},
+            {n: "Consensus", c: "Research", p: "Freemium", u: "https://consensus.app", d: "Answers questions using findings from research papers."},
+            {n: "Windsurf", c: "Coding", p: "Freemium", u: "https://windsurf.com", d: "AI code editor with an agent that works across your project."},
+            {n: "Bolt.new", c: "Coding", p: "Freemium", u: "https://bolt.new", d: "Describe an app and get a working one in the browser."},
+            {n: "v0", c: "Coding", p: "Freemium", u: "https://v0.dev", d: "Generate website and app screens from a text prompt."},
+            {n: "Lovable", c: "Coding", p: "Freemium", u: "https://lovable.dev", d: "Build full web apps by chatting, no setup needed."},
+            {n: "Tabnine", c: "Coding", p: "Paid", u: "https://www.tabnine.com", d: "AI code completion with a focus on privacy."},
+            {n: "Adobe Firefly", c: "Images", p: "Freemium", u: "https://firefly.adobe.com", d: "Image generation and editing from Adobe."},
+            {n: "Ideogram", c: "Images", p: "Freemium", u: "https://ideogram.ai", d: "Image generator that is good at readable text in pictures."},
+            {n: "Playground", c: "Images", p: "Freemium", u: "https://playground.com", d: "Create and edit images and designs with AI."},
+            {n: "Krea", c: "Images", p: "Freemium", u: "https://www.krea.ai", d: "Real-time image generation and upscaling."},
+            {n: "Figma", c: "Design", p: "Freemium", u: "https://www.figma.com", d: "Design apps and websites together, with AI features."},
+            {n: "Looka", c: "Design", p: "Paid", u: "https://looka.com", d: "Create a logo and brand kit in minutes."},
+            {n: "Framer", c: "Design", p: "Freemium", u: "https://www.framer.com", d: "Design and publish a website with AI help."},
+            {n: "HeyGen", c: "Video", p: "Freemium", u: "https://www.heygen.com", d: "Talking-avatar videos from a script."},
+            {n: "Synthesia", c: "Video", p: "Paid", u: "https://www.synthesia.io", d: "Make training and explainer videos with AI presenters."},
+            {n: "Descript", c: "Video", p: "Freemium", u: "https://www.descript.com", d: "Edit video and audio by editing the text transcript."},
+            {n: "Luma Dream Machine", c: "Video", p: "Freemium", u: "https://lumalabs.ai", d: "Turn text or images into short video clips."},
+            {n: "Kling", c: "Video", p: "Freemium", u: "https://klingai.com", d: "Generate video clips from text and images."},
+            {n: "Murf", c: "Audio", p: "Freemium", u: "https://murf.ai", d: "Studio-quality AI voiceovers."},
+            {n: "Adobe Podcast", c: "Audio", p: "Freemium", u: "https://podcast.adobe.com", d: "Clean up voice recordings and remove background noise."},
+            {n: "Udio", c: "Audio", p: "Freemium", u: "https://www.udio.com", d: "Create music tracks from a text description."},
+            {n: "Zapier", c: "Productivity", p: "Freemium", u: "https://zapier.com", d: "Connect your apps and automate tasks with AI."},
+            {n: "Fireflies.ai", c: "Productivity", p: "Freemium", u: "https://fireflies.ai", d: "Records meetings and writes the notes for you."},
+            {n: "Motion", c: "Productivity", p: "Paid", u: "https://www.usemotion.com", d: "AI calendar that plans your tasks and day."},
+            {n: "DeepSeek", c: "Writing", p: "Freemium", u: "https://chat.deepseek.com/", d: "AI assistant for reasoning, writing, answering questions and coding."},
+            {n: "Hugging Face", c: "AI/ML", p: "Free with paid options", u: "https://huggingface.co/", d: "Explore AI models, datasets and community-built machine learning applications."},
+            {n: "Phind", c: "Coding", p: "Check plans", u: "https://www.phind.com/", d: "AI search and coding assistant for programming questions and debugging."},
+        ];
+
+        var COLORS = ["#2f5bff", "#e4572e", "#17a398", "#7a4cc2", "#d6336c", "#2b8a3e", "#c77d00", "#1c7ed6"];
+        var ICON = {Writing: "✍️", Research: "🔎", Coding: "💻", Images: "🖼️", Design: "🎨", Video: "🎬", Audio: "🎧", Productivity: "⚡"};
+        var POPULAR = ["logo", "code", "voice", "video", "presentation", "writing"];
+        function $(id) {return document.getElementById(id)}
+        function esc(s) {return String(s).replace(/[&<>"']/g, function (c) {return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]})}
+
+        // Logo (built in, no image file needed)
+        var LOGO = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true"><rect x="12" y="12" width="30" height="30" rx="8" fill="#FFD23F"/><rect x="5" y="5" width="30" height="30" rx="8" fill="#2F5BFF"/><path d="M20 11.5l2.3 6.6 6.6 2.3-6.6 2.3L20 29.3l-2.3-6.6-6.6-2.3 6.6-2.3z" fill="#fff"/></svg>';
+        document.querySelectorAll(".lgo").forEach(function (e) {e.innerHTML = LOGO; e.style.display = "flex"});
+        $("yr").textContent = new Date().getFullYear();
+
+        var CATS = TOOLS.map(function (t) {return t.c}).filter(function (c, i, a) {return a.indexOf(c) === i});
+        $("sTools").textContent = TOOLS.length;
+        $("sCats").textContent = CATS.length;
+
+        // Mobile menu
+        $("mb").onclick = function () {var o = $("nav").classList.toggle("open"); this.setAttribute("aria-expanded", o)};
+        $("nav").onclick = function (e) {if (e.target.tagName === "A") {$("nav").classList.remove("open")} };
+
+        // Saved tools (stored in the visitor's browser)
+        function load() {try {return JSON.parse(localStorage.getItem("saved") || "[]")} catch (e) {return []} }
+        function store(l) {try {localStorage.setItem("saved", JSON.stringify(l))} catch (e) { } }
+        var saved = load(), cat = "All";
+
+        function color(n) {var h = 0; for (var i = 0; i < n.length; i++)h = (h * 31 + n.charCodeAt(i)) >>> 0; return COLORS[h % COLORS.length]}
+        function toTools() {$("tools").scrollIntoView({behavior: "smooth"})}
+        function setCat(c) {cat = c; filters(); render()}
+
+        // Category tiles
+        $("tiles").innerHTML = CATS.map(function (c) {
+            var n = TOOLS.filter(function (t) {return t.c === c}).length;
+            return '<button class="tile" type="button" data-c="' + esc(c) + '"><span class="ti" aria-hidden="true">' + (ICON[c] || "✨") + '</span><b>' + esc(c) + '</b><small>' + n + ' tools</small></button>';
+        }).join("");
+        $("tiles").onclick = function (e) {
+            var t = e.target.closest(".tile"); if (!t) return;
+            $("q").value = ""; setCat(t.getAttribute("data-c")); toTools();
+        };
+
+        // Popular searches
+        POPULAR.forEach(function (w) {
+            var b = document.createElement("button");
+            b.type = "button"; b.textContent = w;
+            b.onclick = function () {$("q").value = w; cat = "All"; filters(); render(); toTools()};
+            $("pop").appendChild(b);
+        });
+
+        function filters() {
+            var cats = ["All", "Saved"].concat(CATS);
+            $("filters").innerHTML = "";
+            cats.forEach(function (c) {
+                var b = document.createElement("button");
+                b.className = "chip"; b.type = "button";
+                b.textContent = c === "Saved" ? "Saved (" + saved.length + ")" : c;
+                b.setAttribute("aria-pressed", c === cat);
+                b.onclick = function () {setCat(c)};
+                $("filters").appendChild(b);
+            });
+        }
+
+        function render() {
+            var q = $("q").value.trim().toLowerCase(), pr = $("price").value;
+            var list = TOOLS.filter(function (t) {
+                var okC = cat === "All" || (cat === "Saved" ? saved.indexOf(t.n) > -1 : t.c === cat);
+                var okP = pr === "all" || t.p === pr;
+                var okQ = !q || (t.n + " " + t.c + " " + t.d).toLowerCase().indexOf(q) > -1;
+                return okC && okP && okQ;
+            }).sort(function (a, b) {return (b.f ? 1 : 0) - (a.f ? 1 : 0)});
+
+            $("grid").innerHTML = list.map(function (t) {
+                var s = saved.indexOf(t.n) > -1;
+                return '<article class="card">' +
+                    '<button class="save" type="button" data-n="' + esc(t.n) + '" aria-pressed="' + s + '" aria-label="' + (s ? "Remove " : "Save ") + esc(t.n) + '">' + (s ? "★" : "☆") + '</button>' +
+                    '<div class="ct"><div class="lg" style="background:' + color(t.n) + '" aria-hidden="true">' + esc(t.n[0]) + '</div>' +
+                    '<div><h3>' + esc(t.n) + '</h3><span class="cat">' + esc(t.c) + '</span></div></div>' +
+                    '<p>' + esc(t.d) + '</p>' +
+                    '<div class="cf"><span class="pr ' + t.p + '">' + t.p + '</span>' +
+                    '<a class="visit" href="' + esc(t.u) + '" target="_blank" rel="noopener noreferrer">Visit ' + esc(t.n) + '</a></div></article>';
+            }).join("");
+
+            $("empty").hidden = list.length > 0;
+            $("empty").textContent = (cat === "Saved" && !q) ? "Nothing saved yet. Tap the star on a tool to keep it here." : "No tools match that search. Try a different word or clear the filters.";
+            $("rt").textContent = q ? list.length + " result" + (list.length === 1 ? "" : "s") + " for “" + $("q").value.trim() + "”" : (cat === "All" ? "All tools" : cat === "Saved" ? "Your saved tools" : cat);
+        }
+
+        $("grid").onclick = function (e) {
+            var b = e.target.closest(".save"); if (!b) return;
+            var n = b.getAttribute("data-n"), i = saved.indexOf(n);
+            if (i > -1) saved.splice(i, 1); else saved.push(n);
+            store(saved); filters(); render();
+        };
+        $("q").oninput = render;
+        $("price").onchange = render;
+
+        // Forms: send to your email (works once the site is online)
+        function sendForm(data, done) {
+            fetch("https://formsubmit.co/ajax/" + EMAIL, {
+                method: "POST",
+                headers: {"Content-Type": "application/json", "Accept": "application/json"},
+                body: JSON.stringify(data)
+            }).then(function (r) {return r.json()}).then(function () {done(true)}).catch(function () {done(false)});
+        }
+        $("nf").onsubmit = function (e) {
+            e.preventDefault();
+            var f = this;
+            sendForm({_subject: "New subscriber – AI Tools Hub", email: $("ne").value}, function (ok) {
+                $("nmsg").textContent = ok ? "You're in. Watch your inbox for the next tool." : "Something went wrong. Please try again.";
+                if (ok) f.reset();
+            });
+        };
+        $("cf").onsubmit = function (e) {
+            e.preventDefault();
+            var f = this;
+            sendForm({_subject: $("ct").value + " – AI Tools Hub", name: $("cn").value, email: $("ce").value, message: $("cm").value}, function (ok) {
+                $("cmsg").textContent = ok ? "Thanks! Your message was sent." : "Could not send. Please try again.";
+                if (ok) f.reset();
+            });
+        };
+
+        // Back to top
+        window.addEventListener("scroll", function () {$("up").classList.toggle("show", window.scrollY > 600)});
+        $("up").onclick = function () {window.scrollTo({top: 0, behavior: "smooth"})};
+
+        filters(); render();
+    </script>
+</body>
+
+</html>

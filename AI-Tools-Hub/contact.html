@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact – AI Tools Hub</title>
+    <meta name="description" content="Suggest a tool, report a problem or say hello." />
+    <meta name="theme-color" content="#2f5bff" />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="contact">
+    <a class="skip" href="#content">Skip to content</a>
+    <div id="site-header"></div>
+
+    <main id="content" class="page">
+        <h1>Contact us</h1>
+        <p class="lead">Suggest a tool, report a wrong price or broken link, or just say hello.</p>
+
+        <form id="contactForm" class="stack-form">
+            <label for="cName">Your name</label>
+            <input id="cName" type="text" required />
+
+            <label for="cEmail">Email</label>
+            <input id="cEmail" type="email" required />
+
+            <label for="cTopic">What is this about?</label>
+            <select id="cTopic">
+                <option>Suggest a tool</option>
+                <option>Report a problem</option>
+                <option>Something else</option>
+            </select>
+
+            <label for="cMsg">Message</label>
+            <textarea id="cMsg" rows="6" required placeholder="Tool name and link, or describe the problem"></textarea>
+
+            <button type="submit">Send message</button>
+            <p id="contactMsg" class="form-msg" role="status"></p>
+        </form>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
