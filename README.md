@@ -10,6 +10,7 @@ A collection of 50+ AI tools for productivity, coding, writing, image, audio, vi
 ## 💻 Coding
 - GitHub Copilot - github.com/features/copilot
 - Cursor - cursor.sh
+- [agent-qa](https://vostride.com) - Web/mobile QA with persistent memory and validated self-improvement.
 
 ## 🎨 Creativity
 - Midjourney - midjourney.com
